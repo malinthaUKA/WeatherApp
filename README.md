@@ -35,7 +35,7 @@ dependencies {
 
 ```
 
-git clone https://github.com/your-username/weather-app.git
+git clone https://github.com/malinthaUKA/WeatherApp.git
 
 ```
 
