@@ -14,15 +14,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textColor="@color/white"
+        android:textColor="#4BDAEC"
         android:textSize="40dp"
-        android:text="Weather Update"
+        android:text="Weather Master"
         android:textStyle="bold"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/currentTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Current Time"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:textSize="16dp"/>
 
         <Button
             android:id="@+id/btn_Get"
@@ -32,10 +41,10 @@
             android:background="#0070c7"
             android:textColor="@color/white"
             android:onClick="getWeatherDetails"
-            android:text="Click Get Weather For \nNew City"
-            android:layout_marginTop="40dp"
+            android:text="Click Here to Get Weather For \nNew City"
+            android:layout_marginTop="30dp"
             android:backgroundTint="@null"
-            android:textSize="25dp"/>
+            android:textSize="20dp"/>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -53,14 +62,18 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="13dp"
+            android:background="#BDECFE"
+            android:padding="9dp">
 
             <TextView
                 android:id="@+id/lat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lat"
+                android:text="Latitude:"
                 android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 android:layout_alignParentTop="true"
                 android:layout_marginEnd="30dp"/>
 
@@ -68,31 +81,63 @@
                 android:id="@+id/latleft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lat Left"
-                android:textSize="20dp"
-                android:layout_alignParentTop="true"
-                android:layout_toEndOf="@id/lat"
-                android:layout_alignParentEnd="true"/>
+                android:text="_____"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:layout_below="@id/lat"
+                android:layout_marginTop="10dp"/>
 
             <TextView
-                android:id="@+id/lan"
+                android:id="@+id/lon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lan"
+                android:text="Longtitude:"
                 android:textSize="20dp"
-                android:layout_below="@id/lat"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_below="@id/latleft"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="30dp"/>
 
             <TextView
-                android:id="@+id/lanleft"
+                android:id="@+id/lonleft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lan Left"
+                android:text="_____"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:layout_below="@id/lon"
+                android:layout_marginTop="10dp"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F5E0FF"
+            android:layout_marginTop="10dp"
+            android:padding="9dp">
+
+            <TextView
+                android:id="@+id/addres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Location "
                 android:textSize="20dp"
-                android:layout_below="@id/latleft"
-                android:layout_toEndOf="@id/lan"
-                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"/>
+
+            <TextView
+                android:id="@+id/addressleft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="_____"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_below="@id/addres"
                 android:layout_marginTop="10dp"/>
 
         </RelativeLayout>
